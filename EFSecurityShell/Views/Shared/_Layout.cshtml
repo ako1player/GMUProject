@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - EF Security Shell 2019</title>
+    <link rel="icon" type="image/png" href="~/images/MasonM_green.png" />
+    <title>@ViewBag.Title  George Mason University</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top custom-navbar">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,15 +18,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("EF Security Shell", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("George Mason University", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Administration", "Index", "Admin")</li>
-
+                    <li>@Html.ActionLink("Apply Now", "Create", "Applications")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -34,10 +34,19 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - EF Security Shell</p>
-        </footer>
     </div>
+
+    <footer>
+        <div class="custom-footer container-fluid">
+            <h3>Patriots Brave & Bold</h3>
+            George Mason University<br />
+            4400 University Drive<br />
+            Fairfax, Virginia 22030<br />
+            Tel: +1(703)993-1000</p>
+            <p>&copy; @DateTime.Now.Year - George Mason University</p><br />
+            <hr width="50%" />
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace EFSecurityShell.Models
+namespace GMUProject.Models
 {
     public class RoleViewModel
     {
