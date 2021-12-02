@@ -44,7 +44,6 @@ namespace GMUProject.Controllers
         }
 
         // GET: Applications/Create
-        [Authorize]
         public ActionResult Create()
         {
             ViewBag.DecisionID = new SelectList(db.Decisions, "ID", "EnrollmenDecision");
@@ -79,7 +78,7 @@ namespace GMUProject.Controllers
 
                 db.Applications.Add(application);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
             ViewBag.DecisionID = new SelectList(db.Decisions, "ID", "EnrollmenDecision", application.DecisionID);
