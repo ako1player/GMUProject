@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<GMUProject.Models.Application>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Applications";
 }
 
-<h2>Index</h2>
+<h2>Applications</h2>
 @using (Html.BeginForm("Index", "Applications", FormMethod.Get, new
 {
     @class =
@@ -19,7 +19,7 @@
         = "Search Applicants"
         })
     </div>
-    <button type="submit" class="btn btn-default">Search</button>
+    <button type="submit" class="btn btn-default btn-success gmubtn">Search</button>
 }
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -47,9 +47,7 @@
         <th>
             @Html.DisplayNameFor(model => model.EnrollmentDate)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Year)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.Term.TermName)
         </th>
@@ -82,9 +80,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EnrollmentDate)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Year)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.Term.TermName)
             </td>

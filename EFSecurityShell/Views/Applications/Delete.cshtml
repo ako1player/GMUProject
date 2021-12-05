@@ -11,29 +11,6 @@
     <h4>Application</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Decision.EnrollmenDecision)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Decision.EnrollmenDecision)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Major.MajorName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Major.MajorName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Term.TermName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Term.TermName)
-        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
@@ -196,20 +173,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Year)
+            @Html.DisplayNameFor(model => model.Major.MajorName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Year)
+            @Html.DisplayFor(model => model.Major.MajorName)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Term.TermName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Term.TermName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Decision.EnrollmenDecision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Decision.EnrollmenDecision)
+        </dd>
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Delete" class="btn btn-success gmubtn" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
     }

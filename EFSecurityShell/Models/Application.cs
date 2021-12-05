@@ -58,12 +58,14 @@ namespace GMUProject.Models
         [Display(Name = "Graduation Date")]
         public DateTime GraduationDate { get; set; }
         [Required]
-        [Range(3.00, 4.00, ErrorMessage = "You Do Not Meet The Minimum Qualifications.")]
+        [Range(3.00, 4.00, ErrorMessage = "You Do Not Meet The Minimum Qualifications/Invalid GPA Score.")]
         public decimal GPA { get; set; }
         [Required]
+        [Range(0, 800, ErrorMessage = "SAT score can not be more than 800.")]
         [Display(Name = "Math SAT Score")]
         public int MathSat { get; set; }
         [Required]
+        [Range(0, 800, ErrorMessage = "SAT score can not be more than 800.")]
         [Display(Name = "Verbal SAT Score")]
         public int VerbalSat { get; set; }
         [Required]
@@ -71,6 +73,8 @@ namespace GMUProject.Models
 
         public virtual Major Major { get; set; }
         [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Enrollment Date")]
         public string EnrollmentDate { get; set; }
         [Required]
